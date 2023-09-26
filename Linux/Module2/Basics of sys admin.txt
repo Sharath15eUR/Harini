@@ -1,0 +1,83 @@
+1) Create a new user account and home directory called "Duck" 
+
+Ans: harini@DESKTOP-PIA0NLD:~$ sudo adduser
+[sudo] password for harini:
+adduser: Only one or two names allowed.
+harini@DESKTOP-PIA0NLD:~$ sudo adduser duck
+Adding user `duck' ...
+Adding new group `duck' (1001) ...
+Adding new user `duck' (1001) with group `duck' ...
+Creating home directory `/home/duck' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for duck
+Enter the new value, or press ENTER for the default
+        Full Name []: duck
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] y
+harini@DESKTOP-PIA0NLD:~$ ls /home
+duck  harini
+
+2) Set the user account "Duck's" expirey date as 07 - 01 - 2015
+
+Ans: harini@DESKTOP-PIA0NLD:~$ sudo usermod -e 2015-01-07 duck
+harini@DESKTOP-PIA0NLD:~$
+
+3) find the id of the user account "Duck"
+
+Ans: duck@DESKTOP-PIA0NLD:~$ id -u
+1001
+duck@DESKTOP-PIA0NLD:~$ id -n -u
+duck
+duck@DESKTOP-PIA0NLD:~$
+
+4) Type df and du commands and see the output on your terminal.
+
+Ans: duck@DESKTOP-PIA0NLD:~$ df
+Filesystem      1K-blocks     Used  Available Use% Mounted on
+none               924552        4     924548   1% /mnt/wsl
+none            313940240 63713016  250227224  21% /usr/lib/wsl/drivers
+none               924552        0     924552   0% /usr/lib/wsl/lib
+/dev/sdc       1055762868  1598632 1000460764   1% /
+none               924552       80     924472   1% /mnt/wslg
+rootfs             921308     1936     919372   1% /init
+none               924552      852     923700   1% /run
+none               924552        0     924552   0% /run/lock
+none               924552        0     924552   0% /run/shm
+none               924552        0     924552   0% /run/user
+tmpfs                4096        0       4096   0% /sys/fs/cgroup
+none               924552       72     924480   1% /mnt/wslg/versions.txt
+none               924552       72     924480   1% /mnt/wslg/doc
+drvfs           313940240 63713016  250227224  21% /mnt/c
+snapfuse              128      128          0 100% /snap/bare/5
+snapfuse            54528    54528          0 100% /snap/snapd/18933
+snapfuse            74752    74752          0 100% /snap/core22/607
+snapfuse            93952    93952          0 100% /snap/gtk-common-themes/1535
+snapfuse            41856    41856          0 100% /snap/snapd/20092
+snapfuse            75776    75776          0 100% /snap/core22/864
+snapfuse           134144   134144          0 100% /snap/ubuntu-desktop-installer/1243
+snapfuse           134016   134016          0 100% /snap/ubuntu-desktop-installer/1237
+tmpfs              184908        4     184904   1% /run/user/1001
+duck@DESKTOP-PIA0NLD:~$ du
+16
+
+5) Type this command on the terminal and see the output :
+   du -ch *.txt
+
+Ans: harini@DESKTOP-PIA0NLD:~$ du -ch *.txt
+0       abc.txt
+0       exercise.txt
+0       test.txt
+0       total
+
+6) Delete the user account "Duck" permanently along with its home folder
+
+Ans: harini@DESKTOP-PIA0NLD:~$ sudo userdel -r duck
+[sudo] password for harini:
+harini@DESKTOP-PIA0NLD:~$ ls /home
+harini

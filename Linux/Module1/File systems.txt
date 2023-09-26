@@ -1,0 +1,14 @@
+File Systems
+1)Make a directory structure like this in your home directory
+2) Remove the also_inside_demo directory
+
+Ans: harini@DESKTOP-PIA0NLD:~$ mkdir demodir
+harini@DESKTOP-PIA0NLD:~$ cd demodir
+harini@DESKTOP-PIA0NLD:~/demodir$ mkdir inside_demo also_inside_demo
+harini@DESKTOP-PIA0NLD:~/demodir$ cd also_inside_demo
+harini@DESKTOP-PIA0NLD:~/demodir/also_inside_demo$ mkdir abc abc_123
+harini@DESKTOP-PIA0NLD:~/demodir/also_inside_demo$ rmdir abc abc_123
+harini@DESKTOP-PIA0NLD:~/demodir/also_inside_demo$ cd ..
+harini@DESKTOP-PIA0NLD:~/demodir$ rmdir also_inside_demo
+harini@DESKTOP-PIA0NLD:~/demodir$ ls
+inside_demo
