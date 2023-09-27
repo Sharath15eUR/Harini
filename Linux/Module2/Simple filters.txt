@@ -1,0 +1,364 @@
+Head:
+
+1. harini@DESKTOP-PIA0NLD:~$ ls
+abc      demodir    exercise.txt  home         process  test.txt  test2  testb
+abc.txt  error_log  fileinfo      numbers.txt  results  test1,    testa  testh
+harini@DESKTOP-PIA0NLD:~$ head numbers.txt
+1
+2
+22
+3
+2
+43
+6
+875
+43
+56
+harini@DESKTOP-PIA0NLD:~$ head -n5 numbers.txt
+1
+2
+22
+3
+2
+
+2. harini@DESKTOP-PIA0NLD:~$ head /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+harini@DESKTOP-PIA0NLD:~$ head -n3 /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+harini@DESKTOP-PIA0NLD:~$
+
+Tail: 
+
+1. harini@DESKTOP-PIA0NLD:~$ tail numbers.txt
+43
+56
+86
+3
+53
+65
+86
+08
+96
+74
+harini@DESKTOP-PIA0NLD:~$ tail -n5 numbers.txt
+65
+86
+08
+96
+74
+
+2. harini@DESKTOP-PIA0NLD:~$ tail /etc/passwd
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:102:105::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:103:106:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+syslog:x:104:111::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+uuidd:x:106:112::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:107:113::/nonexistent:/usr/sbin/nologin
+harini:x:1000:1000:,,,:/home/harini:/bin/bash
+harini@DESKTOP-PIA0NLD:~$ tail -n3 /etc/passwd
+uuidd:x:106:112::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:107:113::/nonexistent:/usr/sbin/nologin
+harini:x:1000:1000:,,,:/home/harini:/bin/bash
+
+3. harini@DESKTOP-PIA0NLD:~$ tail -f /var/log/auth.log
+Sep 26 18:17:01 DESKTOP-PIA0NLD CRON[1244]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 26 18:17:01 DESKTOP-PIA0NLD CRON[1244]: pam_unix(cron:session): session closed for user root
+Sep 26 22:17:01 DESKTOP-PIA0NLD CRON[1279]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 26 22:17:01 DESKTOP-PIA0NLD CRON[1279]: pam_unix(cron:session): session closed for user root
+Sep 26 23:17:01 DESKTOP-PIA0NLD CRON[1369]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 26 23:17:01 DESKTOP-PIA0NLD CRON[1369]: pam_unix(cron:session): session closed for user root
+Sep 27 11:28:51 DESKTOP-PIA0NLD systemd-logind[135]: New seat seat0.
+Sep 27 11:28:54 DESKTOP-PIA0NLD login[343]: pam_unix(login:session): session opened for user harini(uid=1000) by (uid=0)
+Sep 27 11:28:54 DESKTOP-PIA0NLD systemd-logind[135]: New session c1 of user harini.
+Sep 27 11:28:54 DESKTOP-PIA0NLD systemd: pam_unix(systemd-user:session): session opened for user harini(uid=1000) by (uid=0)
+
+Sort: 
+
+1.harini@DESKTOP-PIA0NLD:~$ sort numbers.txt
+08
+1
+2
+2
+22
+3
+3
+43
+43
+53
+56
+6
+65
+74
+86
+86
+875
+96
+harini@DESKTOP-PIA0NLD:~$ sort -n numbers.txt
+1
+2
+2
+3
+3
+6
+08
+22
+43
+43
+53
+56
+65
+74
+86
+86
+96
+875
+harini@DESKTOP-PIA0NLD:~$ sort -rn numbers.txt
+875
+96
+86
+86
+74
+65
+56
+53
+43
+43
+22
+08
+6
+3
+3
+2
+2
+1
+harini@DESKTOP-PIA0NLD:~$ sort -run numbers.txt
+875
+96
+86
+74
+65
+56
+53
+43
+22
+08
+6
+3
+2
+1
+
+2. harini@DESKTOP-PIA0NLD:~$ sort /etc/passwd
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+harini:x:1000:1000:,,,:/home/harini:/bin/bash
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+messagebus:x:102:105::/nonexistent:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+root:x:0:0:root:/root:/bin/bash
+sync:x:4:65534:sync:/bin:/bin/sync
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+syslog:x:104:111::/home/syslog:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+systemd-timesync:x:103:106:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+tcpdump:x:107:113::/nonexistent:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+uuidd:x:106:112::/run/uuidd:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+harini@DESKTOP-PIA0NLD:~$ sort -r /etc/passwd
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+uuidd:x:106:112::/run/uuidd:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+tcpdump:x:107:113::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:103:106:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+syslog:x:104:111::/home/syslog:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+root:x:0:0:root:/root:/bin/bash
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+messagebus:x:102:105::/nonexistent:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+harini:x:1000:1000:,,,:/home/harini:/bin/bash
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+harini@DESKTOP-PIA0NLD:~$ sort /etc/passwd -t ":" -k3
+root:x:0:0:root:/root:/bin/bash
+harini:x:1000:1000:,,,:/home/harini:/bin/bash
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:102:105::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:103:106:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+syslog:x:104:111::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+uuidd:x:106:112::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:107:113::/nonexistent:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+harini@DESKTOP-PIA0NLD:~$ sort -n /etc/passwd -t ":" -k3
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:102:105::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:103:106:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+syslog:x:104:111::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+uuidd:x:106:112::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:107:113::/nonexistent:/usr/sbin/nologin
+harini:x:1000:1000:,,,:/home/harini:/bin/bash
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+
+Cut:
+
+1. harini@DESKTOP-PIA0NLD:~$ cut marks.txt -d " " -f1
+english
+ed
+maths
+
+2. harini@DESKTOP-PIA0NLD:~$ cut /etc/passwd -d ":" -f1
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+systemd-network
+systemd-resolve
+messagebus
+systemd-timesync
+syslog
+_apt
+uuidd
+tcpdump
+harini
+
+Paste: 
+
+1. harini@DESKTOP-PIA0NLD:~$ paste numbers.txt marks.txt
+1       english 50
+2       ed 45
+22      maths 50
+3
+2
+43
+6
+875
+43
+56
+86
+3
+53
+65
+86
+08
+96
+74
+harini@DESKTOP-PIA0NLD:~$ paste -s numbers.txt marks.txt
+1       2       22      3       2       43      6       875     43      56      86      3       53      65      86     08       96      74
+english 50      ed 45   maths 50
+
+2. harini@DESKTOP-PIA0NLD:~$ paste alphabets.txt number.txt
+a       1
+b       2
+c       3
+d       4
+e       5
+f       6
+g       7
+h       8
+i       9
+j       10
+k       11
+l       12
+m       13
+n       14
+o       15
+p       16
+q       17
+r       18
+s       19
+t       20
+u       21
+v       22
+w       23
+x       24
+y       25
+z       26

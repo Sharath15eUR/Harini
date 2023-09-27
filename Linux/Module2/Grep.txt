@@ -1,0 +1,9 @@
+1) Explore some other commands like -E, + and ?
+
+Ans: harini@DESKTOP-PIA0NLD:~$ grep -E "I" harini.txt
+I can do it:)
+I'm capable
+harini@DESKTOP-PIA0NLD:~$ echo adcde |grep "[a-z]\+"
+adcde
+harini@DESKTOP-PIA0NLD:~$ echo abcd |grep -E "ab?c"
+abcd

@@ -1,0 +1,8 @@
+1) List those entries that are 5 letters long and starts with Y
+
+Ans: harini@DESKTOP-PIA0NLD:~$ cat >g.txt
+Yashi
+Yashwanth
+Harini
+harini@DESKTOP-PIA0NLD:~$ grep "^Y.... " g.txt
+Yashi

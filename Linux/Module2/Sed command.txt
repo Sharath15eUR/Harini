@@ -1,0 +1,10 @@
+1. Use the same text file seddemo.txt. Try to print records from 6th to 12th line.
+
+Ans: harini@DESKTOP-PIA0NLD:~$ sed -n '6,12p' seddemo.txt
+X006|Mohan Kumar|computers|67|Incomplete|0
+W007|Sandeep|civil|2|Fail|0
+A008|Yogesh|computers|91|Pass|8000
+S009|Yojna chaudhury|electronics|38|Incomplete|1000
+A010|Zubin|Computers|12|Fail|1500
+C011|Mira Nair|electronics|66|Pass|7000
+X012|Meera Banik|civil|76|Pass|6300
