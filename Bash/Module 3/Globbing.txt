@@ -1,0 +1,24 @@
+1) Write a Bash script to do all operations discussed under Globbing
+
+Ans: harini@DESKTOP-PIA0NLD:~$ gedit globbing.sh &
+[2] 1423
+harini@DESKTOP-PIA0NLD:~$ ./globbing.sh
+.sh
+add.sh  globbing.sh  hello.sh  username.sh
+\n[a-c].sh
+add.sh
+\n[^a-c].sh
+globbing.sh  hello.sh  username.sh
+\n[Aa].sh
+add.sh
+
+globbing.sh:
+#!/bin/bash
+echo ".sh"
+ls *.sh
+echo "\n[a-c].sh"
+ls [a-c]*.sh
+echo "\n[^a-c].sh"
+ls [^a-c]*.sh
+echo "\n[Aa].sh"
+ls [Aa]*.sh

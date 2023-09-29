@@ -1,0 +1,3 @@
+harini@DESKTOP-PIA0NLD:~$ ./hello.sh
+Welcome to Bash learning\n
+***************

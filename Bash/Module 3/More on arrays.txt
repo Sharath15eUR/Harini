@@ -1,0 +1,30 @@
+1) Declare an Array names2 of length 7 and perform following operations-
+   a. Extract three elements starting from index two. 
+   b. Replace third element with 'Debian' and display.
+   c. Append any new name at the end of Array
+
+Ans: harini@DESKTOP-PIA0NLD:~$ gedit name2.sh &
+[3] 1551
+[1]   Done                    gedit arr.sh
+[2]   Done                    gedit globbing.sh
+harini@DESKTOP-PIA0NLD:~$ chmod +x name2.sh
+harini@DESKTOP-PIA0NLD:~$ ./name2.sh
+All elements: asd fgh jkl qwe rty uio pzx
+
+three elements jkl qwe rty
+
+All elements: asd fgh Debian qwe rty uio pzx
+
+All elements: asd fgh Debian qwe rty uio pzx HArini
+
+harini@DESKTOP-PIA0NLD:~$
+
+name2.sh
+#!/bin/bash
+declare -a name2=('asd' 'fgh' 'jkl' 'qwe' 'rty' 'uio' 'pzx')
+echo -e "All elements: ${name2[@]} \n"
+echo -e "three elements ${name2[@]:2:3} \n"
+name2[2]='Debian'
+echo -e "All elements: ${name2[@]} \n"
+name2=("${name2[@]}" "HArini")
+echo -e "All elements: ${name2[@]} \n"

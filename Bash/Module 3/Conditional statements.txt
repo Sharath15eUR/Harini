@@ -1,0 +1,25 @@
+1) Write a script which will take your name as an input.
+2) It should check this name with your system's username.
+3) If the username matches, it should greet you by displaying "Hello".
+4) Else, it should display "Try again"
+
+HINT: Your system's username is stored in a variable $USER
+
+Ans: harini@DESKTOP-PIA0NLD:~$ gedit hellousr.sh &
+[6] 1745
+[5]   Done                    gedit hello.sh
+harini@DESKTOP-PIA0NLD:~$ chmod +x hellousr.sh
+harini@DESKTOP-PIA0NLD:~$ ./hellousr.sh
+Name: harini
+Hello
+harini@DESKTOP-PIA0NLD:~$ ./hellousr.sh
+Name: Harini
+Try again
+
+hellousr
+#!/bin/bash
+read -p "Name: " name
+if [ "$name" = "$USER" ]; then
+  echo "Hello"
+else echo "Try again "
+fi

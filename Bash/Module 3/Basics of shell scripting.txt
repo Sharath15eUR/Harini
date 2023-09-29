@@ -1,0 +1,17 @@
+1) Write a simple Bash program to get the following system variables:
+   a. pwd
+   b. logname
+
+Ans: harini@DESKTOP-PIA0NLD:~$ echo "$PWD"
+/home/harini
+harini@DESKTOP-PIA0NLD:~$ echo "$LOGNAME"
+harini
+
+2) Write a simple Bash program:
+   a. To ask username from user
+   b. Exit the program, if user does not enter anything within 10 seconds
+
+Ans: harini@DESKTOP-PIA0NLD:~$ gedit username.sh &
+harini@DESKTOP-PIA0NLD:~$ chmod +x username.sh
+harini@DESKTOP-PIA0NLD:~$ ./username.sh
+Enter usernameharini@DESKTOP-PIA0NLD:~$

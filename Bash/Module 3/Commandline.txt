@@ -1,0 +1,14 @@
+1) Write a bash program for addition using command line arguments.
+
+Ans: harini@DESKTOP-PIA0NLD:~$ chmod +x add.sh
+harini@DESKTOP-PIA0NLD:~$ gedit add.sh &
+[2] 757
+harini@DESKTOP-PIA0NLD:~$ chmod +x add.sh
+[2]+  Done                    gedit add.sh
+harini@DESKTOP-PIA0NLD:~$ ./add.sh 1 2
+Sum= 3
+
+add.sh 
+#!/bin/bash
+sum=$(($1+$2))
+echo "Sum= $sum"

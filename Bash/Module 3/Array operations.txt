@@ -1,0 +1,23 @@
+1) Declare an Array names of length 7 and find
+   a. The total number of elements
+   b. Print all the elements
+   c. Print the 5th element
+
+Ans: harini@DESKTOP-PIA0NLD:~$ gedit arr.sh &
+[1] 1460
+harini@DESKTOP-PIA0NLD:~$chmod +x arr.sh
+harini@DESKTOP-PIA0NLD:~$ ./arr.sh
+Total no. of ele 7
+
+Ele Harini Nsgfzs akyi sewar dmknu faes gghi
+
+Ele dmknu
+
+
+arr.sh
+
+#!/bin/bash
+declare -a name=('Harini' 'Nsgfzs' 'akyi' 'sewar' 'dmknu' 'faes' 'gghi')
+echo "Total no. of ele ${#name[@]}"
+echo -e "\nEle ${name[@]}"
+echo -e "\nEle ${name[4]}"

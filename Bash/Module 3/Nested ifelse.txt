@@ -1,0 +1,28 @@
+harini@DESKTOP-PIA0NLD:~$ gedit num.sh &
+[4] 1620
+[3]   Done                    gedit name2.sh
+harini@DESKTOP-PIA0NLD:~$ chmod +x num.sh
+harini@DESKTOP-PIA0NLD:~$ ./num.sh
+harini@DESKTOP-PIA0NLD:~$ number: 3
+=3
+harini@DESKTOP-PIA0NLD:~$ ./num.sh
+number: 5
+Greater than 3
+harini@DESKTOP-PIA0NLD:~$ ./num.sh
+number: 2
+Less than 3
+
+num.sh
+#!/bin/bash
+read -p "number: " input
+if [ -z "input" ]; then
+   echo "Empty"
+else 
+   if [ $input -gt 3 ]; then
+     echo "Greater than 3"
+   elif [ $input -lt 3 ]; then
+     echo "Less than 3"
+  else 
+    echo "=3"
+  fi
+fi
