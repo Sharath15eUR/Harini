@@ -1,0 +1,29 @@
+1) Write a program,
+    a. Where a function adds all the elements in an array. 
+    b. The function should display the sum of elements.
+    c. Make 2 function calls with array elements- (1, 2, 3) and (4, 5, 6).
+
+harini@DESKTOP-PIA0NLD:~$ gedit arraysum.sh &
+[2] 819
+harini@DESKTOP-PIA0NLD:~$ chmod +x arraysum.sh
+[2]+  Done                    gedit arraysum.sh
+harini@DESKTOP-PIA0NLD:~$ ./arraysum.sh
+sum = 6
+sum = 15
+
+arraysum.sh
+#!/bin/bash
+array_sum()
+{
+ a=($@)
+ sum=0
+ for i in range ${a[@]}
+ do
+ sum=$(( sum + i))
+ done
+ echo "sum = $sum"
+}
+declare -a arr=("1" "2" "3") 
+array_sum ${arr[@]}
+declare -a ar=("4" "5" "6") 
+array_sum ${ar[@]}

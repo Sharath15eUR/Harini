@@ -1,0 +1,23 @@
+Using File Descriptors
+
+1) Try to append few lines to a file test.txt using file descriptor.
+2) Display the content of the file using file descriptor.
+
+harini@DESKTOP-PIA0NLD:~$ cat test.txt 
+harini@DESKTOP-PIA0NLD:~$ gedit fd.sh &
+[1] 473
+harini@DESKTOP-PIA0NLD:~$chmod +x fd.sh
+harini@DESKTOP-PIA0NLD:~$ ./fd.sh
+Appending.......
+Hi Harini
+
+fd.sh:
+#!/bin/bash
+exec 3> test.txt
+echo "Appending....... " >&3
+echo "Hi Harini" >&3
+exec 3>&-
+
+exec 3< test.txt
+cat <&3
+exec 3<&-

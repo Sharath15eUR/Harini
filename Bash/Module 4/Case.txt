@@ -1,0 +1,32 @@
+harini@DESKTOP-PIA0NLD:~$ gedit switch.sh &
+[2] 956
+harini@DESKTOP-PIA0NLD:~$ chmod +x switch.sh
+[2]+  Done                    gedit switch.sh
+harini@DESKTOP-PIA0NLD:~$./switch.sh
+Enter a 4
+Enter b 4
+Enter operator x
+4 * 4 = 16
+
+switch.sh:
+#!/bin/bash
+read -p "Enter a " a
+read -p "Enter b " b
+read -p "Enter operator " o
+case $o in
++) 
+   op=$((a + b))
+    echo "$a + $b = $op" 
+         ;;
+-) op=$((a-b))
+ echo "$a - $b = $op" 
+         ;; 
+x) op=$((a*b))
+   echo "$a * $b = $op" 
+         ;; 
+/) op=$((a/b))
+ echo "$a / $b = $op" 
+         ;;
+*) exit 0;
+ ;;
+ esac

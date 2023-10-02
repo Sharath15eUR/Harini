@@ -1,0 +1,43 @@
+harini@DESKTOP-PIA0NLD:~$ gedit nested-while.sh &
+[1] 546
+harini@DESKTOP-PIA0NLD:~$chmod +x nested-while.sh
+harini@DESKTOP-PIA0NLD:~$ ./nested-while.sh
+Files in test.sh directory:
+test.sh/*
+---------------------
+Files in test.txt directory:
+test.txt/*
+---------------------
+Files in test1, directory:
+test1,/*
+---------------------
+Files in test2 directory:
+test2/*
+---------------------
+Files in testa directory:
+testa/*
+---------------------
+Files in testb directory:
+testb/*
+---------------------
+Files in testh directory:
+testh/*
+---------------------
+
+nested-while.sh:
+#!/bin/bash
+dirs=(test*)
+i=0
+while [ $i -lt ${#dirs[@]} ]; do
+  dir="${dirs[$i]}"
+  echo "Files in $dir directory: "
+  j=0
+  files=("$dir"/*)
+  while [ $j -lt ${#files[@]} ]; do
+  file="${files[$j]}"
+    echo "$file"
+    ((j++))
+  done
+  echo "---------------------"
+  ((i++))
+done

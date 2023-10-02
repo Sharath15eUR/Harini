@@ -1,0 +1,19 @@
+harini@DESKTOP-PIA0NLD:~$ gedit logi.sh &
+[1] 1806
+harini@DESKTOP-PIA0NLD:~$ chmod +x logi.sh
+harini@DESKTOP-PIA0NLD:~$ ./logi.sh
+invalid
+harini@DESKTOP-PIA0NLD:~$ ./logi.sh test.sh
+test.sh not exists or not executable
+harini@DESKTOP-PIA0NLD:~$ ./logi.sh hello.sh
+hello.sh exists, executable
+
+logi.sh
+#!/bin/bash
+if [ -n "$1" ];then
+   if [ -f "$1" ]  && [ -x "$1" ]; then
+      echo "$1 exists, executable"
+   else echo "$1 not exists or not executable"
+   fi
+else echo "invalid"
+fi

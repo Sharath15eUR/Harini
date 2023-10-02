@@ -1,0 +1,29 @@
+
+1) Explore some more attributes
+   -r
+   -x
+   -o
+Ans: harini@DESKTOP-PIA0NLD:~$ gedit roe.sh &
+[2] 586
+harini@DESKTOP-PIA0NLD:~$ chmod +x roe.sh
+[2]+  Done                    gedit roe.sh
+harini@DESKTOP-PIA0NLD:~$ ./roe.sh
+readable
+executable
+not owner
+
+roe.sh
+#!/bin/bash
+file_path="hello.sh"
+if [ -r "$file_path" ]; then
+   echo "readable"
+else echo "not readable"
+fi
+if [ -x "$file_path" ]; then
+   echo "executable"
+else echo "not executable"
+fi
+if [ -o "$file_path" ]; then
+   echo "owner"
+else echo "not owner"
+fi

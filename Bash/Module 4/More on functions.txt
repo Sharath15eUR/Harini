@@ -1,0 +1,23 @@
+1) Write a program, 
+   a. where the function accepts two arguments.
+   b. The function should multiply the two arguments.
+   c. Make 3 function calls with arguments - (1, 2), (2, 3) and (3, 4)
+
+harini@DESKTOP-PIA0NLD:~$ gedit func.sh &
+[1] 473
+harini@DESKTOP-PIA0NLD:~$ chmod +x product.sh
+harini@DESKTOP-PIA0NLD:~$ ./product.sh
+1 * 2 = 2
+2 * 3 = 6
+3 * 4 = 12
+
+product.sh
+#!/bin/bash
+multiply ()
+{
+  product=$(($1 * $2))
+  echo "$1 * $2 = $product"
+}
+multiply "1" "2"
+multiply "2" "3"
+multiply "3" "4"
