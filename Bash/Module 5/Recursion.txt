@@ -1,0 +1,28 @@
+harini@DESKTOP-PIA0NLD:~$ ./recursion.sh 5
+sum of  numbers is
+15
+harini@DESKTOP-PIA0NLD:~$ gedit recursion.sh &
+[2] 6586
+harini@DESKTOP-PIA0NLD:~$ chmod +x recursion.sh
+[2]+  Done                    gedit recursion.sh
+harini@DESKTOP-PIA0NLD:~$ ./recursion.sh 5
+sum of  numbers is
+15
+
+recursion.sh
+
+#!/bin/bash
+sum ()
+{
+n="$1"
+if [ $n -eq 1 ]; then
+echo "1"
+else 
+Nsum=$((n-1))
+Nsum=$(sum $Nsum)
+Nsum=$((Nsum + n))
+echo $Nsum
+fi
+}
+echo "sum of $n numbers is "
+sum "$1"

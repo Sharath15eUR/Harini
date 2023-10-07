@@ -1,0 +1,19 @@
+harini@DESKTOP-PIA0NLD:~$ gedit function.sh &
+[2] 744
+harini@DESKTOP-PIA0NLD:~$ chmod +x function.sh
+[2]+  Done                    gedit function.sh
+harini@DESKTOP-PIA0NLD:~$ ./function.sh 5 4
+5+4= 9
+
+function.sh
+#!/bin/bash
+source sum.sh
+sum "$1" "$2"
+
+sum.sh
+#!/bin/bash
+sum ()
+{
+sum=$(($1+$2))
+echo "$1+$2= $sum"
+}

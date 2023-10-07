@@ -1,0 +1,8 @@
+harini@DESKTOP-PIA0NLD:~$ cat> X_file.txt
+Hi!!harini@DESKTOP-PIA0NLD:~$ cat> out_file.txt
+#511000
+harini@DESKTOP-PIA0NLD:~$ cat out_file.txt>output.txt
+harini@DESKTOP-PIA0NLD:~$ cat X_file.txt >>output.txt
+harini@DESKTOP-PIA0NLD:~$ cat output.txt
+#511000
+Hi!!

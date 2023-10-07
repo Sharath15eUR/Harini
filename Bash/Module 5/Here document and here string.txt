@@ -1,0 +1,15 @@
+harini@DESKTOP-PIA0NLD:~$ gedit here.sh &
+[2] 6794
+harini@DESKTOP-PIA0NLD:~$ chmod +x here.sh
+[2]+  Done                    gedit here.sh
+harini@DESKTOP-PIA0NLD:~$ ./here.sh
+HARINIIIII
+HI
+
+here.sh
+#!/bin/bash
+tr a-z A-Z << here
+Hariniiiii
+here
+tr a-z A-Z <<< 'hi'
+

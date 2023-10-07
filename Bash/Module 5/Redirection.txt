@@ -1,0 +1,10 @@
+harini@DESKTOP-PIA0NLD:~$ cat> info.txt
+Harini Nagarathinam
+7339689699
+West Mambalam
+[1]+  Done                    gedit recursion.sh
+harini@DESKTOP-PIA0NLD:~$ cat info.txt>temp.txt
+harini@DESKTOP-PIA0NLD:~$ cat temp.txt
+Harini Nagarathinam
+7339689699
+West Mambalam
